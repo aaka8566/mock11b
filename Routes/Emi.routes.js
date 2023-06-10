@@ -3,8 +3,8 @@ const EMISRouter=express.Router();
 const {Emismodel}=require("../Models/Emic.model");
 const cors=require("cors");
 EMISRouter.use(cors());
-EMISRouter.get("/emi",async(req,res)=>{
-
+EMISRouter.post("/emi",async(req,res)=>{
+console.log(req.body,"hi");
     try{
     const {loanamount,rateofinterest,tenure}=req.body;
     if(!loanamount||!rateofinterest||!tenure){

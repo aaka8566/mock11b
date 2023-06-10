@@ -5,8 +5,9 @@ require("dotenv").config();
 const {connection}=require("./db");
 const {usersRouter}=require("./Routes/User.routes");
 const {EMISRouter}=require("./Routes/Emi.routes");
-app.use(cors());
 app.use(express.json());
+app.use(cors());
+
 app.get("/",(req,res)=>{
     res.send("hi")
 })
